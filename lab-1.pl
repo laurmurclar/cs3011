@@ -25,3 +25,5 @@ neg(s(X),p(Y)) :- eval(X,A), neg(A,Y),!.
 neg(p(X),s(Y)) :- eval(X,A), neg(A,Y),!.
 
 minus(X, Y) :- eval(X,A), neg(A,B), eval(B,Y),!.
+
+subtract(X,Y,Z) :- minus(Y,A), add2(X,A,Z).
